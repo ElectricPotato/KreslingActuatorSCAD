@@ -12,9 +12,9 @@ nSections=1;
 step=360/n;
 
 bPoints=[
-    for (j=[0:h:h])
+    for (j=[0:1])
         for (i=[0:n-1])
-            [r*sin(i*step+(twist*j/h)),r*cos(i*step+(twist*j/h)),j]
+            [r*sin(i*step+(twist*j)),r*cos(i*step+(twist*j)),j*h]
     ];
 echo(bPoints);
 bFaces=[for (i=[0:n-1])i];
